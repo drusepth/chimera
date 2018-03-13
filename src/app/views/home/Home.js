@@ -60,19 +60,20 @@ class Home extends PureComponent {
             <div className="box">
               <Card>
                 <CardTitle
-                  title="Home"
-                  subtitle="View"
+                  title="Welcome"
+                  subtitle="How this works"
                 />
                 <CardText>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Donec mattis pretium massa. Aliquam erat volutpat. Nulla facilisi.
-                  Donec vulputate interdum sollicitudin. Nunc lacinia auctor quam sed pellentesque.
-                  Aliquam dui mauris, mattis quis lacus id, pellentesque lobortis odio.
+                  Hi. Start with either a face or a body by clicking the links in the sidebar.
                 </CardText>
                 <CardActions>
                   <FlatButton
-                    label="go previous"
-                    onTouchTap={this.goPreviousRoute}
+                    label="Browse faces"
+                    onTouchTap={this.routeTo('faces')}
+                  />
+                  <FlatButton
+                    label="Browse bodies"
+                    onTouchTap={this.routeTo('bodies')}
                   />
                 </CardActions>
               </Card>
@@ -90,6 +91,12 @@ class Home extends PureComponent {
   goPreviousRoute = () => {
     const { history } = this.props;
     history.goBack();
+  }
+
+  routeTo = routeName => event => {
+    event.preventDefault();
+    const { history } = this.props;
+    history.push({pathname: routeName});
   }
 }
 

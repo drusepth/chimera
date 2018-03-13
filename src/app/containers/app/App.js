@@ -23,6 +23,8 @@ import Face                 from 'material-ui/svg-icons/action/face';
 import Accessibility        from 'material-ui/svg-icons/action/accessibility';
 import Help                 from 'material-ui/svg-icons/action/help';
 import Dashboard            from 'material-ui/svg-icons/action/dashboard';
+import SettingsVoice        from 'material-ui/svg-icons/action/settings-voice';
+import Wallpaper            from 'material-ui/svg-icons/device/wallpaper';
 
 class App extends Component {
   static propTypes = {
@@ -36,7 +38,7 @@ class App extends Component {
 
   state = {
     appName:      appConfig.APP_NAME,
-    drawerOpened: false,
+    drawerOpened: true,
     drawerMenus:  appConfig.DRAWER.menus
   };
 
@@ -54,7 +56,7 @@ class App extends Component {
           docked={true}
           onRequestChange={this.handlesOnDrawerRequestChange}
           style={{zIndex: 1000}}>
-          <div style={{backgroundColor:green800, height: '100px'}} />
+          <div style={{backgroundColor:green800, height: '64px'}} />
           {
             drawerMenus.map(
               ({id, icon, title, routeName}, menuIdx) => (
@@ -111,6 +113,10 @@ class App extends Component {
       return <Help />;
     } else if (iconName == 'Dashboard') {
       return <Dashboard />
+    } else if (iconName == 'SettingsVoice') {
+      return <SettingsVoice />
+    } else if (iconName == 'Wallpaper') {
+      return <Wallpaper />
     } else {
       return <Help />;
     }

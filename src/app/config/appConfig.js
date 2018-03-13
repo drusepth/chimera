@@ -18,7 +18,9 @@ export const appConfig = {
       {id: 2, icon: 'GroupWork',     title: 'Your characters', routeName: 'characters'},
       {id: 3, icon: 'Face',          title: 'Faces',           routeName: 'faces'},
       {id: 4, icon: 'Accessibility', title: 'Bodies',          routeName: 'bodies'},
-      {id: 5, icon: 'Help',          title: 'About',           routeName: 'about'}
+      {id: 5, icon: 'SettingsVoice', title: 'Voices',          routeName: 'bodies'},
+      {id: 6, icon: 'Wallpaper',     title: 'Backgrounds',     routeName: 'bodies'},
+      {id: 7, icon: 'Help',          title: 'About',           routeName: 'about'}
     ]
   }
 };

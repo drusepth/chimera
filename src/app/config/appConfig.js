@@ -1,9 +1,5 @@
 // @flow weak
 
-// Icons
-//import GroupWork from 'material-ui/svg-icons/action/group-work';
-
-
 export const appConfig = {
   // dev mode to mock async data for instance
   DEV_MODE: true,
@@ -18,9 +14,9 @@ export const appConfig = {
 
   DRAWER: {
     menus: [
-      {id: 1, title: 'Your characters', routeName: '/'},
-      {id: 2, title: 'Faces', routeName: 'about'},
-      {id: 3, title: 'Bodies', routeName: 'about'}
+      {id: 1, icon: 'GroupWork', title: 'Your characters', routeName: '/'},
+      {id: 2, icon: 'Face', title: 'Faces', routeName: 'about'},
+      {id: 3, icon: 'Accessibility', title: 'Bodies', routeName: 'about'}
     ]
   }
 

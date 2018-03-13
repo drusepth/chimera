@@ -17,6 +17,12 @@ import {
 import MainRoutes           from '../../routes/MainRoutes';
 import { withRouter }       from 'react-router';
 
+// Icons
+import GroupWork from 'material-ui/svg-icons/action/group-work';
+import Face from 'material-ui/svg-icons/action/face';
+import Accessibility from 'material-ui/svg-icons/action/accessibility';
+import Help from 'material-ui/svg-icons/action/help';
+
 class App extends Component {
   static propTypes = {
     // react-router 4:
@@ -53,6 +59,7 @@ class App extends Component {
               ({id, icon, title, routeName}, menuIdx) => (
                 <MenuItem
                   key={menuIdx}
+                  leftIcon={this.iconForMenuItem(icon)}
                   onTouchTap={this.routeTo(routeName)}>
                   {title}
                 </MenuItem>
@@ -89,6 +96,18 @@ class App extends Component {
         <MainRoutes />
       </div>
     );
+  }
+
+  iconForMenuItem = (iconName) => {
+    if (iconName == 'GroupWork') {
+      return <GroupWork />;
+    } else if (iconName == 'Face') {
+      return <Face />;
+    } else if (iconName == 'Accessibility') {
+      return <Accessibility />;
+    } else {
+      return <Help />;
+    }
   }
 
   openDrawer = () => {

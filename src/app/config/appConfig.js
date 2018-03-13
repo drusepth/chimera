@@ -14,9 +14,11 @@ export const appConfig = {
 
   DRAWER: {
     menus: [
-      {id: 1, icon: 'GroupWork',     title: 'Your characters', routeName: '/'},
-      {id: 2, icon: 'Face',          title: 'Faces',           routeName: 'about'},
-      {id: 3, icon: 'Accessibility', title: 'Bodies',          routeName: 'about'}
+      {id: 1, icon: 'Dashboard',     title: 'Home',            routeName: '/'},
+      {id: 2, icon: 'GroupWork',     title: 'Your characters', routeName: 'characters'},
+      {id: 3, icon: 'Face',          title: 'Faces',           routeName: 'faces'},
+      {id: 4, icon: 'Accessibility', title: 'Bodies',          routeName: 'bodies'},
+      {id: 5, icon: 'Help',          title: 'About',           routeName: 'about'}
     ]
   }
 };

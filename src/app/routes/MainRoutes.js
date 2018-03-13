@@ -11,6 +11,9 @@ import { App }                  from '../containers';
 import {
   Home,
   About,
+  Bodies,
+  Characters,
+  Faces,
   PageNotFound
 }                               from '../views';
 
@@ -19,6 +22,9 @@ const Routes = () => {
     <Switch path="/" component={App} >
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
+      <Route path="/characters" component={Characters} />
+      <Route path="/faces" component={Faces} />
+      <Route path="/bodies" component={Bodies} />
       <Route component={PageNotFound} />
     </Switch>
   );

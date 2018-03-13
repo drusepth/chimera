@@ -18,10 +18,11 @@ import MainRoutes           from '../../routes/MainRoutes';
 import { withRouter }       from 'react-router';
 
 // Icons
-import GroupWork from 'material-ui/svg-icons/action/group-work';
-import Face from 'material-ui/svg-icons/action/face';
-import Accessibility from 'material-ui/svg-icons/action/accessibility';
-import Help from 'material-ui/svg-icons/action/help';
+import GroupWork            from 'material-ui/svg-icons/action/group-work';
+import Face                 from 'material-ui/svg-icons/action/face';
+import Accessibility        from 'material-ui/svg-icons/action/accessibility';
+import Help                 from 'material-ui/svg-icons/action/help';
+import Dashboard            from 'material-ui/svg-icons/action/dashboard';
 
 class App extends Component {
   static propTypes = {
@@ -106,6 +107,10 @@ class App extends Component {
       return <Face />;
     } else if (iconName == 'Accessibility') {
       return <Accessibility />;
+    } else if (iconName == 'Help') {
+      return <Help />;
+    } else if (iconName == 'Dashboard') {
+      return <Dashboard />
     } else {
       return <Help />;
     }

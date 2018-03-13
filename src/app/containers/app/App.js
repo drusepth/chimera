@@ -53,7 +53,7 @@ class App extends Component {
           docked={true}
           onRequestChange={this.handlesOnDrawerRequestChange}
           style={{zIndex: 1000}}>
-          <div style={{backgroundColor:green800, height: '64px'}} />
+          <div style={{backgroundColor:green800, height: '100px'}} />
           {
             drawerMenus.map(
               ({id, icon, title, routeName}, menuIdx) => (
@@ -81,10 +81,11 @@ class App extends Component {
               anchorOrigin={{horizontal: 'right', vertical: 'top'}}>
               {
                 drawerMenus.map(
-                  ({id, title, routeName}, menuIdx) => (
+                  ({id, icon, title, routeName}, menuIdx) => (
                     <MenuItem
                       key={menuIdx}
                       primaryText={title}
+                      rightIcon={this.iconForMenuItem(icon)}
                       onTouchTap={this.routeTo(routeName)}
                     />
                   )

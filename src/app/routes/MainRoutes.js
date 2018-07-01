@@ -14,6 +14,8 @@ import {
   Bodies,
   Characters,
   Faces,
+  Voices,
+  Backgrounds,
   PageNotFound
 }                               from '../views';
 
@@ -25,6 +27,8 @@ const Routes = () => {
       <Route path="/characters" component={Characters} />
       <Route path="/faces" component={Faces} />
       <Route path="/bodies" component={Bodies} />
+      <Route path="/voices" component={Voices} />
+      <Route path="/backgrounds" component={Backgrounds} />
       <Route component={PageNotFound} />
     </Switch>
   );
